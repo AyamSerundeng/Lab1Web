@@ -1,246 +1,288 @@
-# Penjelasan Materi Praktikum 1: HTML Dasar
+# Lab1Web - Praktikum 1: HTML Dasar
 
-## 1. Tujuan Pembelajaran
-
-Setelah menyelesaikan praktikum ini, mahasiswa diharapkan mampu:
-
-1. Memahami struktur dasar dokumen HTML.
-2. Mengenali dan menggunakan tag-tag dasar HTML.
-3. Membuat dokumen HTML yang valid dan terstruktur.
-
----
-
-## 2. Pengantar HTML
-
-**HTML (HyperText Markup Language)** adalah bahasa markup yang digunakan untuk menyusun struktur dan konten halaman web. HTML terdiri dari serangkaian *tag* yang memberi instruksi kepada browser mengenai cara menampilkan informasi.
-
-Pada praktikum ini, fokus materi mencakup:
-- Struktur dokumen HTML
-- Tag dan atribut
-- Heading dan paragraf
-- Hyperlink
-- Gambar
-- List (daftar)
+**Nama:** Khairi Ramadhan Yudhatama  
+**NIM:** 312510099  
+**Kelas:** Pemrograman Web (I251A)  
+**Dosen:** Agung Nugroho, S.Kom., M.Kom.  
+**Mata Kuliah:** Pemrograman Web  
+**Universitas:** Universitas Pelita Bangsa
 
 ---
 
-## 3. Struktur Dasar Dokumen HTML
+## Deskripsi Praktikum
 
-Setiap dokumen HTML memiliki struktur standar sebagai berikut:
+Praktikum ini bertujuan untuk mengenal dan mempraktikkan tag-tag dasar HTML, mulai dari struktur dokumen, paragraf, heading, formatting teks, gambar, hyperlink, list, komentar, hingga menggabungkan semua elemen menjadi satu halaman Profil Mahasiswa.
+
+Struktur folder yang digunakan:
+
+```
+praktikum-1-html-dasar/
+├── index.html
+├── halaman2.html
+└── images/
+    └── profil.jpg
+```
+
+---
+
+## Langkah-langkah Praktikum
+
+### 1. Membuat Paragraf
+
+Menambahkan beberapa paragraf sederhana menggunakan tag `<p>`.
+
+**Kode yang ditambahkan:**
+
+```html
+<!-- Ini adalah paragraf pertama -->
+<p>
+  Kami sedang belajar HTML dasar pada mata kuliah Pemrograman Web. Praktikum ini
+  digunakan untuk mengenal tag-tag dasar HTML.
+</p>
+
+<!-- Ini adalah paragraf kedua -->
+<p>
+  HTML digunakan untuk menyusun struktur dan konten halaman web. Browser akan
+  menampilkan hasil interpretasi dari dokumen HTML.
+</p>
+```
+
+**Hasil:**  
+Setelah disimpan dan di-refresh di browser, teks muncul sebagai dua paragraf terpisah dengan jarak antar paragraf yang jelas.
+
+---
+
+### 2. Menambahkan Judul
+
+Menambahkan heading `h1` sebelum paragraf pertama dan `h2` sebelum paragraf kedua.
+
+**Kode yang ditambahkan:**
+
+```html
+<!-- judul utama -->
+<h1>Belajar Dasar HTML</h1>
+
+<!-- subjudul -->
+<h2>Paragraf pada HTML</h2>
+```
+
+**Hasil:**  
+Judul utama (`h1`) tampil lebih besar dan menonjol, sedangkan subjudul (`h2`) lebih kecil. Hierarki heading membantu struktur dokumen.
+
+---
+
+### 3. Memformat Teks
+
+Melakukan pemformatan teks pada paragraf menggunakan tag formatting.
+
+**Kode yang digunakan:**
+
+```html
+<p>
+  Kami sedang belajar <b>HTML dasar</b> pada mata kuliah <i>Pemrograman Web</i>.
+</p>
+
+<p>
+  HTML merupakan <strong>bahasa markup</strong> untuk menyusun struktur halaman
+  web.
+</p>
+
+<p>
+  Air ditulis sebagai H<sub>2</sub>O dan luas dapat ditulis sebagai
+  x<sup>2</sup>.
+</p>
+```
+
+**Eksperimen tambahan:**  
+Mencoba tag lain seperti `<em>`, `<mark>`, `<small>`, `<del>`, dan `<ins>` untuk melihat perbedaan efek visualnya.
+
+**Hasil:**
+
+- `<b>` dan `<strong>` membuat teks tebal
+- `<i>` dan `<em>` membuat teks miring
+- `<sub>` untuk subscript, `<sup>` untuk superscript
+- Tag lain memberikan efek highlight, ukuran kecil, coret, dan garis bawah.
+
+---
+
+### 4. Menyisipkan Gambar
+
+Menyiapkan gambar di folder `images/` lalu menampilkannya menggunakan tag `<img>`.
+
+**Struktur folder:**
+
+```
+praktikum-1-html-dasar/
+├── index.html
+└── images/
+    └── profil.jpg
+```
+
+**Kode yang ditambahkan:**
+
+```html
+<h3>Menambahkan Gambar</h3>
+
+<img
+  src="images/profil.jpg"
+  width="200"
+  alt="Foto profil mahasiswa"
+  title="Foto Profil Mahasiswa"
+/>
+```
+
+**Hasil:**  
+Gambar profil muncul di halaman dengan lebar 200px. Atribut `alt` menampilkan teks alternatif jika gambar gagal dimuat, dan `title` muncul saat kursor diarahkan ke gambar.
+
+---
+
+### 5. Mengatur Ukuran Gambar
+
+Mengatur ukuran gambar menggunakan atribut `width` dan `height`.
+
+**Contoh kode:**
+
+```html
+<img src="images/profil.jpg" width="200" alt="Foto profil mahasiswa" />
+```
+
+**Hasil:**  
+Dengan mengubah nilai `width` (dan/atau `height`), ukuran gambar berubah sesuai nilai yang diberikan. Disarankan menjaga proporsi agar gambar tidak terdistorsi.
+
+---
+
+### 6. Menambahkan Hyperlink
+
+Membuat file kedua bernama `halaman2.html` dan menambahkan navigasi antar halaman serta link eksternal.
+
+**Kode navigasi (diletakkan di `index.html` dan `halaman2.html`):**
+
+```html
+<!-- navigasi halaman -->
+<nav>
+  <a href="index.html">Dasar HTML</a>
+  <a href="halaman2.html">Halaman 2</a>
+  <a href="https://www.google.com">Website Eksternal</a>
+</nav>
+
+<hr />
+```
+
+**Hasil:**
+
+- Link internal (`index.html` dan `halaman2.html`) membuka halaman lokal.
+- Link eksternal membuka website Google di tab/browser yang sama.
+- Tag `<hr>` menampilkan garis horizontal sebagai pemisah.
+
+---
+
+### 7. Menambahkan List
+
+Menambahkan daftar keahlian (unordered list) dan urutan belajar (ordered list).
+
+**Kode yang ditambahkan:**
+
+```html
+<h2>Keahlian</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+
+<h2>Urutan Belajar</h2>
+<ol>
+  <li>Mempelajari struktur HTML</li>
+  <li>Mempelajari tag dan atribut</li>
+  <li>Membuat halaman HTML</li>
+  <li>Menguji halaman pada browser</li>
+</ol>
+```
+
+**Hasil:**
+
+- `<ul>` menampilkan daftar berpoin (bullet).
+- `<ol>` menampilkan daftar berurutan (angka).
+
+---
+
+### 8. Menambahkan Komentar
+
+Menambahkan komentar HTML untuk memberi penanda pada bagian kode.
+
+**Contoh kode:**
+
+```html
+<!-- Bagian Profil Mahasiswa -->
+<h2>Profil Mahasiswa</h2>
+
+<!-- Bagian Keahlian -->
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+</ul>
+```
+
+**Hasil:**  
+Komentar (`<!-- ... -->`) tidak ditampilkan di browser. Fungsinya hanya untuk dokumentasi kode agar lebih mudah dibaca dan dikelola.
+
+---
+
+### 9. Menggabungkan Semua Elemen
+
+Membuat halaman **Profil Mahasiswa** yang menggabungkan semua elemen yang telah dipelajari.
+
+**Kode lengkap (`index.html`):**
 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Judul Halaman</title>
-</head>
-<body>
-    <!-- Konten yang ditampilkan di browser -->
-</body>
+  <head>
+    <title>Profil Mahasiswa</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="halaman2.html">Halaman 2</a>
+    </nav>
+
+    <hr />
+
+    <h1>Profil Mahasiswa</h1>
+
+    <img src="images/profil.jpg" width="200" alt="Foto profil mahasiswa" />
+
+    <h2>Data Diri</h2>
+
+    <p>Nama: Khairi Ramadhan Yudhatama</p>
+
+    <p>Program Studi: Teknik Informatika</p>
+
+    <p>
+      Saya sedang mempelajari dasar-dasar pengembangan aplikasi web menggunakan
+      HTML.
+    </p>
+
+    <h2>Keahlian</h2>
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <h2>Target Belajar</h2>
+
+    <ol>
+      <li>Menguasai HTML</li>
+      <li>Menguasai CSS</li>
+      <li>Menguasai JavaScript</li>
+    </ol>
+  </body>
 </html>
 ```
 
-### Penjelasan Bagian-bagian Utama
-
-| Bagian              | Fungsi                                                                 |
-|---------------------|------------------------------------------------------------------------|
-| `<!DOCTYPE html>`   | Menyatakan bahwa dokumen menggunakan standar HTML5                     |
-| `<html>`            | Elemen akar (root) dari seluruh dokumen                                |
-| `<head>`            | Berisi metadata halaman (judul, CSS, script, dll.)                     |
-| `<title>`           | Menentukan judul yang muncul di tab browser                            |
-| `<body>`            | Berisi seluruh konten yang ditampilkan kepada pengguna                 |
+**Hasil:**  
+Halaman profil lengkap dengan navigasi, gambar, data diri, daftar keahlian, dan target belajar. Semua elemen HTML dasar sudah digabungkan dalam satu dokumen yang terstruktur.
 
 ---
-
-## 4. Elemen, Tag, dan Atribut
-
-### Elemen HTML
-Elemen adalah komponen dasar pembentuk dokumen HTML. Umumnya terdiri dari:
-- Tag pembuka
-- Isi (content)
-- Tag penutup
-
-Contoh:
-```html
-<p>Ini adalah sebuah paragraf.</p>
-```
-
-### Tag HTML
-Tag adalah penanda yang ditulis di dalam kurung siku (`<>`).  
-Sebagian besar tag ditulis berpasangan (`<p>...</p>`), namun ada juga tag *self-closing* seperti `<br>`, `<hr>`, `<img>`, dan `<input>`.
-
-### Atribut HTML
-Atribut memberikan informasi tambahan pada elemen dan ditulis di dalam tag pembuka.
-
-Contoh:
-```html
-<a href="https://www.example.com">Kunjungi Website</a>
-<img src="foto.jpg" alt="Foto profil">
-```
-
----
-
-## 5. Tag Heading
-
-HTML menyediakan enam tingkat heading:
-
-```html
-<h1>Heading Level 1</h1>
-<h2>Heading Level 2</h2>
-<h3>Heading Level 3</h3>
-<h4>Heading Level 4</h4>
-<h5>Heading Level 5</h5>
-<h6>Heading Level 6</h6>
-```
-
-**Catatan penting:**  
-Gunakan heading secara hierarkis. `<h1>` untuk judul utama, diikuti `<h2>`, `<h3>`, dan seterusnya. Penggunaan yang terstruktur membantu SEO dan aksesibilitas.
-
----
-
-## 6. Paragraf, Line Break, dan Horizontal Rule
-
-| Tag   | Fungsi                              | Contoh Penggunaan                  |
-|-------|-------------------------------------|------------------------------------|
-| `<p>` | Membuat paragraf                    | `<p>Teks paragraf</p>`             |
-| `<br>`| Memaksa pindah baris (line break)   | `Teks baris 1<br>Teks baris 2`     |
-| `<hr>`| Menampilkan garis horizontal        | `<hr>`                             |
-
----
-
-## 7. Pemformatan Teks
-
-Beberapa tag yang sering digunakan untuk memformat teks:
-
-| Tag        | Keterangan                  |
-|------------|-----------------------------|
-| `<b>`      | Teks tebal (bold)           |
-| `<strong>` | Teks penting (semantic bold)|
-| `<i>`      | Teks miring (italic)        |
-| `<em>`     | Teks ditegaskan (emphasis)  |
-| `<mark>`   | Teks ditandai (highlight)   |
-| `<small>`  | Teks lebih kecil            |
-| `<del>`    | Teks dicoret (deleted)      |
-| `<ins>`    | Teks sisipan (inserted)     |
-| `<sub>`    | Subscript                   |
-| `<sup>`    | Superscript                 |
-
-Contoh:
-```html
-<p>Air ditulis sebagai H<sub>2</sub>O dan kuadrat sebagai x<sup>2</sup>.</p>
-```
-
----
-
-## 8. Hyperlink (Tag Anchor)
-
-Tag `<a>` digunakan untuk membuat hyperlink. Atribut utama yang digunakan adalah `href`.
-
-### Jenis Hyperlink
-
-1. **Internal** (ke halaman dalam website yang sama)
-   ```html
-   <a href="halaman2.html">Halaman 2</a>
-   ```
-
-2. **Eksternal** (ke website lain)
-   ```html
-   <a href="https://www.google.com">Google</a>
-   ```
-
-3. **Anchor** (ke bagian tertentu dalam halaman yang sama)
-   ```html
-   <h2 id="materi">Materi HTML</h2>
-   <a href="#materi">Menuju Materi HTML</a>
-   ```
-
----
-
-## 9. Tag Image
-
-Gambar ditampilkan menggunakan tag `<img>` (self-closing).
-
-Atribut penting:
-
-| Atribut  | Fungsi                                      |
-|----------|---------------------------------------------|
-| `src`    | Path atau URL file gambar                   |
-| `alt`    | Teks alternatif (penting untuk aksesibilitas)|
-| `width`  | Lebar gambar                                |
-| `height` | Tinggi gambar                               |
-| `title`  | Tooltip saat mouse diarahkan ke gambar      |
-
-Contoh:
-```html
-<img src="images/profil.jpg" 
-     width="200" 
-     alt="Foto profil mahasiswa" 
-     title="Foto Profil Mahasiswa">
-```
-
-**Catatan:** Jika path pada atribut `src` salah, gambar tidak akan tampil (broken image).
-
----
-
-## 10. Tag List
-
-### Unordered List (`<ul>`)
-Digunakan untuk daftar tanpa urutan (bullet points).
-
-```html
-<ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
-```
-
-### Ordered List (`<ol>`)
-Digunakan untuk daftar berurutan (bernomor).
-
-```html
-<ol>
-    <li>Mempelajari struktur HTML</li>
-    <li>Mempelajari tag dan atribut</li>
-    <li>Membuat halaman HTML</li>
-</ol>
-```
-
----
-
-## 11. Komentar HTML
-
-Komentar digunakan untuk memberikan catatan pada kode. Browser akan mengabaikan komentar.
-
-```html
-<!-- Ini adalah komentar HTML -->
-```
-
-Komentar sangat berguna untuk:
-- Memberi penanda bagian kode
-- Menonaktifkan kode sementara
-- Memberikan penjelasan kepada developer lain
-
----
-
-## 12. Ringkasan Praktik yang Harus Dilakukan
-
-1. Membuat struktur dasar HTML.
-2. Menambahkan heading dan paragraf.
-3. Melakukan pemformatan teks.
-4. Menyisipkan gambar.
-5. Membuat hyperlink internal dan eksternal.
-6. Membuat unordered list dan ordered list.
-7. Menambahkan komentar.
-8. Menggabungkan semua elemen menjadi halaman **Profil Mahasiswa**.
-
-## 13. Struktur Output yang Diharapkan
-
-```
-Lab1Web/
-├── index.html
-├── halaman2.html
-├── images/
-│   └── profil.jpg
-└── README.md
-```
