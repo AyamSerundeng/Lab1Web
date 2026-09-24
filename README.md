@@ -286,14 +286,3 @@ Lab1Web/
 │   └── profil.jpg
 └── README.md
 ```
-
----
-
-**Catatan:**  
-Praktikum 1 hanya berfokus pada HTML Dasar. Materi CSS dan JavaScript akan dipelajari pada pertemuan berikutnya sesuai Rencana Pembelajaran Semester (RPS).
-```
-
----
-
-File sudah dibuat: **`Penjelasan_HTML_Dasar.md`**  
-Langsung bisa didownload.
