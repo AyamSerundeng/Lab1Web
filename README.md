@@ -234,49 +234,7 @@ Komentar sangat berguna untuk:
 7. Menambahkan komentar.
 8. Menggabungkan semua elemen menjadi halaman **Profil Mahasiswa**.
 
----
-
-## 13. Jawaban Pertanyaan Teori
-
-1. **Fungsi `<!DOCTYPE html>`**  
-   Menyatakan bahwa dokumen menggunakan standar HTML5 dan membantu browser merender halaman dengan benar.
-
-2. **Perbedaan Tag, Elemen, dan Atribut**  
-   - **Tag**: penanda (`<p>`, `</p>`)  
-   - **Elemen**: kombinasi tag + isi  
-   - **Atribut**: informasi tambahan pada tag (`href`, `src`, `alt`)
-
-3. **Perbedaan `<p>` dan `<br>`**  
-   - `<p>`: membuat paragraf (ada jarak atas-bawah)  
-   - `<br>`: hanya memaksa pindah baris tanpa membuat paragraf baru
-
-4. **Fungsi atribut `href`**  
-   Menentukan tujuan (URL) dari hyperlink.
-
-5. **Perbedaan hyperlink internal vs eksternal**  
-   - Internal: mengarah ke file dalam website yang sama  
-   - Eksternal: mengarah ke website di luar domain
-
-6. **Fungsi `src` dan `alt` pada `<img>`**  
-   - `src`: lokasi file gambar  
-   - `alt`: teks alternatif jika gambar gagal dimuat + untuk aksesibilitas
-
-7. **Perbedaan `<ul>` dan `<ol>`**  
-   - `<ul>`: daftar tidak berurutan (bullet)  
-   - `<ol>`: daftar berurutan (nomor)
-
-8. **Jika path `src` salah**  
-   Gambar tidak tampil (muncul ikon broken image).
-
-9. **Mengapa heading harus terstruktur**  
-   Membantu struktur dokumen, SEO, dan aksesibilitas (screen reader).
-
-10. **Fungsi komentar**  
-    Memberikan catatan pada kode tanpa ditampilkan di browser.
-
----
-
-## 14. Struktur Output yang Diharapkan
+## 13. Struktur Output yang Diharapkan
 
 ```
 Lab1Web/
